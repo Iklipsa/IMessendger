@@ -45,5 +45,35 @@ namespace ChatClientCS.Data
                 OnPropertyChanged();
             }
         }
+        public SampleMainWindowViewModel()
+        {
+            ObservableCollection<ChatMessage> someChatter = new ObservableCollection<ChatMessage>();
+
+            someChatter.Add(new ChatMessage
+            {
+                Author = "Ivan",
+                Message = "Привет, как твои вопросы?",
+                Time = DateTime.Now,
+                IsOriginNative = true
+            });
+            someChatter.Add(new ChatMessage
+            {
+                Author = "Ivan",
+                Message = ":P",
+                Time = DateTime.Now,
+                IsOriginNative = true
+            });
+            someChatter.Add(new ChatMessage
+            {
+                Author = "Alisa",
+                Message = "Привет, привет хорошо все решила",
+                Time = DateTime.Now                
+            });    
+                    
+            Participants.Add(new Actor { Name = "Ivan", Chatter = someChatter, HasSentNewMessage = false });
+            Participants.Add(new Actor { Name = "Alisa", Chatter = someChatter, IsTyping = true });
+
+            SelectedParticipant = Participants.First();
+        }
     }
 }

@@ -29,7 +29,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid Background="#00000000">
-                            <materialDesign:PackIcon Name="SendIcon" Kind="SendSecure" SnapsToDevicePixels="True"
+                            <materialDesign:PackIcon Name="SendIcon" Kind="Telegram" SnapsToDevicePixels="True"
                                                      Foreground="{TemplateBinding Foreground}"
                                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -101,7 +101,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsSelected" Value="true">
-                                <Setter Property="Background" TargetName="Bd" Value="#E3F2FD"/>
+                                <Setter Property="Background" TargetName="Bd" Value="#FFB7C4FF"/>
                                 <Setter Property="Foreground" 
                                         Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
                             </Trigger>
@@ -122,7 +122,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-      
+
         <DataTemplate x:Key="ParticipantsDataTemplate">
             <Border BorderThickness="0,0,0,1" BorderBrush="{DynamicResource MaterialDesignDivider}"
                     Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}}"
@@ -340,167 +340,5 @@
                         Command="{Binding SendTextMessageCommand}" Foreground="#FF1D0999"/>
             </Grid>
         </Border>
-
-        <!--// Navigation Panel //--><!--
-        <Grid   x:Name="nav_pnl"
-                    HorizontalAlignment="Left"
-                    Width="62"
-                    Background="#2E333A" Grid.RowSpan="2">
-            <StackPanel x:Name="st_pnl">
-                --><!--// Grid for the Menu Toggle Button //--><!--
-                <Grid Height="90">
-                    --><!--// Menu title text //--><!--
-                    <TextBlock
-                                    Grid.Column="0"
-                                    Margin="68,18,0,42"
-                                    Text="Menu"
-                                    Foreground="White"
-                                    FontSize="17"
-                                    Background="Transparent"
-                                    HorizontalAlignment="Left" RenderTransformOrigin="0.484,0.367">                                                                
-                        --><!--// Shadow Effect //--><!--
-                        <TextBlock.Effect>
-                            <DropShadowEffect  BlurRadius="7"
-                                                   ShadowDepth="1"
-                                                   Direction="-90"
-                                                   Color="Honeydew"/>
-                        </TextBlock.Effect>
-                    </TextBlock>
-                    --><!--// Toggle Button //--><!--
-                    <ToggleButton x:Name="Tg_Btn"
-                                      Grid.Column="0"
-                                      VerticalAlignment="Center"
-                                      HorizontalAlignment="Left"
-                                      Margin="18,-20,0,0"
-                                      Height="30"
-                                      Width="30"
-                                      BorderThickness="0"
-                                      Style="{StaticResource tb_style}">
-
-                        --><!--// Toggle button default background image //--><!--
-                        <ToggleButton.Background>
-
-                            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/tgBtn_default.png"
-                                            Stretch="None"/>
-
-                        </ToggleButton.Background>
-                        --><!--// Toggle Button - Checked, Unchecked events //--><!--
-                        <ToggleButton.Triggers>
-                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                <BeginStoryboard>
-                                    <Storyboard x:Name="HideStackPanel">
-                                        <DoubleAnimation
-                                                Storyboard.TargetName="nav_pnl"
-                                                Storyboard.TargetProperty="Width"
-                                                BeginTime="0:0:0"
-                                                From="140" To="65"
-                                                Duration="0:0:0.2">
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                <BeginStoryboard>
-                                    <Storyboard x:Name="ShowStackPanel">
-                                        <DoubleAnimation                                               
-                                                Storyboard.TargetName="nav_pnl"
-                                                Storyboard.TargetProperty="Width"
-                                                BeginTime="0:0:0"
-                                                From="65" To="140"
-                                                Duration="0:0:0.3">
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </ToggleButton.Triggers>
-                    </ToggleButton>
-                </Grid>
-                --><!--// ListView with menu list items //--><!--
-                <ListView  x:Name="LV"
-                               Background="Transparent"
-                               BorderBrush="Transparent"
-                               ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="260">
-                    --><!--// Home //--><!--
-                    <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,10" MouseEnter="ListViewItem_MouseEnter">
-                        <StackPanel Orientation="Horizontal"
-                                        Width="140">
-                            <Image Source="pack://siteoforigin:,,,/Resources/img_home.png"
-                                       Stretch="None"
-                                       Margin="7,0,0,0"/>
-                            <TextBlock Text="Home"
-                                       Margin="20,0,0,0" Foreground="#DDFFFFFF" Height="16"/>
-
-                        </StackPanel>
-                        --><!--// Tooltip //--><!--
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tt_home"
-                                        Content="Home">
-                            </ToolTip>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                    --><!--// Contacts //--><!--
-                    <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,10" MouseEnter="ListViewItem_MouseEnter">
-                        <StackPanel Orientation="Horizontal"
-                                        Width="140">
-                            <Image Source="pack://siteoforigin:,,,/Resources/img_contact.png"
-                                       Stretch="None"
-                                       Margin="7,0,0,0" OpacityMask="Black"/>
-                            <TextBlock Text="Contacts"
-                                       Margin="20,0,0,0" Foreground="#DDFFFFFF" Height="16">
-                            </TextBlock>
-
-                        </StackPanel>
-                        --><!--// Tooltip //--><!--
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tt_contacts"
-                                         Content="Contacts"/>
-
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                    --><!--// Messages //--><!--
-                    <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,10" MouseEnter="ListViewItem_MouseEnter">
-                        <StackPanel Orientation="Horizontal"
-                                        Width="140">
-                            <Image Source="pack://siteoforigin:,,,/Resources/img_message.png"
-                                       Stretch="None"
-                                       Margin="7,0,0,0"/>
-                            <TextBlock Text="Messages"
-                                           Margin="20,0,0,0" Foreground="#DDFFFFFF" Height="18">
-                            </TextBlock>
-
-                        </StackPanel>
-                        --><!--// Tooltip //--><!--
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tt_messages"
-                                         Content="Messages">
-                            </ToolTip>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                    --><!--// Maps //--><!--
-                    <ListViewItem HorizontalAlignment="Left" Margin="0,0,0,1" MouseEnter="ListViewItem_MouseEnter">
-                        <StackPanel Orientation="Horizontal"
-                                        Width="140">
-                            <Image Source="pack://siteoforigin:,,,/Resources/img_setting.png"
-                                       Stretch="None"
-                                       Margin="7,0,0,0"/>
-                            <TextBlock Text="Maps"
-                                           Margin="20,0,0,0" Foreground="#DDFFFFFF" Height="16">
-                            </TextBlock>
-
-                        </StackPanel>
-                        --><!--// Tooltip //--><!--
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tt_maps"
-                                         Content="Maps">
-                            </ToolTip>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                    --><!--// Settings //--><!--
-                </ListView>
-            </StackPanel>
-        </Grid>-->
     </Grid>
 </UserControl>

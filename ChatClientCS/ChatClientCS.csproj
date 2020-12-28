@@ -153,7 +153,7 @@
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\IChatService.cs" />
     <Compile Include="Services\IDialogService.cs" />
-    <Compile Include="Utils\BringNewItemIntoViewBehavior.cs" />
+    <Compile Include="Utils\BringNewElementIntoView.cs" />
     <Compile Include="Utils\ByteBitmapSourceConverter.cs" />
     <Compile Include="Utils\ViewModelLocator.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -196,7 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ChatMessage.cs" />
-    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
