@@ -156,18 +156,10 @@
     <Compile Include="Utils\BringNewItemIntoViewBehavior.cs" />
     <Compile Include="Utils\ByteBitmapSourceConverter.cs" />
     <Compile Include="Utils\ViewModelLocator.cs" />
-    <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\HouseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\ChatView.xaml.cs">
       <DependentUpon>ChatView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataView.xaml.cs">
-      <DependentUpon>DataView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -194,14 +186,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ChatView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DataView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

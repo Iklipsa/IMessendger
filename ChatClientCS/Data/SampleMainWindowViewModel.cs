@@ -23,8 +23,8 @@ namespace ChatClientCS.Data
             }
         }
 
-        private ObservableCollection<Participant> _participants = new ObservableCollection<Participant>();
-        public ObservableCollection<Participant> Participants
+        private ObservableCollection<Actor> _participants = new ObservableCollection<Actor>();
+        public ObservableCollection<Actor> Participants
         {
             get { return _participants; }
             set
@@ -34,8 +34,8 @@ namespace ChatClientCS.Data
             }
         }
 
-        private Participant _selectedParticipant;
-        public Participant SelectedParticipant
+        private Actor _selectedParticipant;
+        public Actor SelectedParticipant
         {
             get { return _selectedParticipant; }
             set

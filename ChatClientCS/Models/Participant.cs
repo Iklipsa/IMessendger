@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace ChatClientCS.Models
 {
-    public class Participant : ViewModelBase
+    public class Actor : ViewModelBase
     {
         public string Name { get; set; }
         public byte[] Photo { get; set; }
@@ -30,6 +30,6 @@ namespace ChatClientCS.Models
             set { _isTyping = value; OnPropertyChanged(); }
         }
 
-        public Participant() { Chatter = new ObservableCollection<ChatMessage>(); }
+        public Actor() { Chatter = new ObservableCollection<ChatMessage>(); }
     }
 }

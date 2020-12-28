@@ -44,10 +44,7 @@
             </DataTemplate>
             <DataTemplate x:Key="ChatTemplate">
                 <views:ChatView/>
-            </DataTemplate>
-            <DataTemplate x:Key="DataTemplate">
-                <views:DataView/>
-            </DataTemplate>
+            </DataTemplate>            
 
             <Style x:Key="ChatContentStyle" TargetType="ContentControl">
                 <Setter Property="ContentTemplate" Value="{StaticResource LoginTemplate}"/>

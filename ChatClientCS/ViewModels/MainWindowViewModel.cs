@@ -65,8 +65,8 @@ namespace ChatClientCS.ViewModels
             }
         }
 
-        private ObservableCollection<Participant> _participants = new ObservableCollection<Participant>();
-        public ObservableCollection<Participant> Participants
+        private ObservableCollection<Actor> _participants = new ObservableCollection<Actor>();
+        public ObservableCollection<Actor> Participants
         {
             get { return _participants; }
             set
@@ -76,8 +76,8 @@ namespace ChatClientCS.ViewModels
             }
         }
 
-        private Participant _selectedParticipant;
-        public Participant SelectedParticipant
+        private Actor _selectedParticipant;
+        public Actor SelectedParticipant
         {
             get { return _selectedParticipant; }
             set
@@ -173,7 +173,7 @@ namespace ChatClientCS.ViewModels
                 users = await chatService.LoginAsync(_userName, Avatar());
                 if (users != null)
                 {
-                    users.ForEach(u => Participants.Add(new Participant { Name = u.Name, Photo = u.Photo }));
+                    users.ForEach(u => Participants.Add(new Actor { Name = u.Name, Photo = u.Photo }));
                     UserMode = UserModes.Chat;
                     IsLoggedIn = true;
                     return true;
@@ -422,7 +422,7 @@ namespace ChatClientCS.ViewModels
             var ptp = Participants.FirstOrDefault(p => string.Equals(p.Name, u.Name));
             if (_isLoggedIn && ptp == null)
             {
-                ctxTaskFactory.StartNew(() => Participants.Add(new Participant
+                ctxTaskFactory.StartNew(() => Participants.Add(new Actor
                 {
                     Name = u.Name,
                     Photo = u.Photo
