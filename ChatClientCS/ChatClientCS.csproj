@@ -154,6 +154,7 @@
     <Compile Include="Services\IChatService.cs" />
     <Compile Include="Services\IDialogService.cs" />
     <Compile Include="Utils\BringNewElementIntoView.cs" />
+    <Compile Include="Utils\BringNewItemIntoViewBehavior.cs" />
     <Compile Include="Utils\ByteBitmapSourceConverter.cs" />
     <Compile Include="Utils\ViewModelLocator.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
