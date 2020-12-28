@@ -57,7 +57,7 @@
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AWAAAAAAACAAACAAAAAAAAQAAAAAAAAAACACAAEAAAA=</HashCode>
-      <FileName>Models\Participant.cs</FileName>
+      <FileName>Models\Actor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChatClientCS.Models.User" Collapsed="true">
@@ -94,13 +94,6 @@
       <FileName>Services\DialogService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ChatClientCS.Utils.BringNewItemIntoViewBehavior" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAFCBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Utils\BringNewItemIntoViewBehavior.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="ChatClientCS.Utils.ByteBitmapSourceConverter" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="11" Y="0.5" Width="1.5" />
