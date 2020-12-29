@@ -290,9 +290,9 @@
                       ItemsSource="{Binding SelectedParticipant.Chatter}" 
                       ItemTemplate="{DynamicResource MessagesDataTemplate}"
                       ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White">
-            <i:Interaction.Behaviors>
+            <!--<i:Interaction.Behaviors>
                 <utils:BringNewItemIntoViewBehavior/>
-            </i:Interaction.Behaviors>
+            </i:Interaction.Behaviors>-->
             <ItemsControl.Template>
                 <ControlTemplate TargetType="ItemsControl">
                     <ScrollViewer>
