@@ -13,7 +13,7 @@
                    DataContext="{Binding Source={StaticResource VMLocator}, Path=MainVM}"
                    d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type={x:Type data:SampleMainWindowViewModel}}"
                    Title="Idea Messenger" Height="450" Width="850" TitleCaps="False" TitleCharacterCasing="Normal" 
-                   ShowTitleBar="True" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Topmost="True">
+                   ShowTitleBar="True" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Topmost="True" Loaded="MetroWindow_Loaded">
     <i:Interaction.Triggers>
         <i:EventTrigger>
             <i:InvokeCommandAction Command="{Binding ConnectCommand}"/>
@@ -28,10 +28,22 @@
                 <ColumnDefinition Width="71*"/>
                 <ColumnDefinition Width="260*"/>
             </Grid.ColumnDefinitions>
-            <ContentControl Content="{Binding}" Style="{StaticResource ChatContentStyle}" Grid.ColumnSpan="2"/>
+            <ContentControl Content="{Binding}" Style="{StaticResource ChatContentStyle}" Grid.ColumnSpan="2" Margin="0,0,150,0"/>
 
-            <Grid>
-
+            <Grid Grid.Column="1" Margin="468,0,0,0" Background="WhiteSmoke">
+                <TextBlock Text="Structure"
+                                       Margin="10,10,10,393"  Foreground="#FF22055F" Height="16"/>
+                <TreeView Margin="5,40,5,92" x:Name="tvProjects">
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                            <TextBlock Text="{Binding Name}" />
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>!--
+                </TreeView>
+                <StackPanel Margin="5,332,5,5">
+                    <TextBox x:Name="TextTree" Margin="5,0" />
+                    <Button Content="Добавить" Height="25" Margin="15,10,15,0" Click="ButtonAddItem" FontSize="12"/>
+                </StackPanel>
             </Grid>
         </Grid>
         <!--// Navigation Panel //-->
@@ -76,7 +88,7 @@
                             </Image.Effect>
                         </Image>
 
-                        
+
                         <ToggleButton.Triggers>
                             <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                 <BeginStoryboard>

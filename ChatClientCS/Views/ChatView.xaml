@@ -286,7 +286,7 @@
         </Border>
 
         <!--Messages-->
-        <ItemsControl x:Name="MessagesItemsCtrl" Grid.Column="1" Margin="0,5,0,0" 
+        <ItemsControl x:Name="MessagesItemsCtrl" Grid.Column="1" Margin="0,5,150,0" 
                       ItemsSource="{Binding SelectedParticipant.Chatter}" 
                       ItemTemplate="{DynamicResource MessagesDataTemplate}"
                       ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White">
@@ -304,7 +304,7 @@
 
         <Border Grid.Row="1" Grid.Column="1" SnapsToDevicePixels="True"
                 BorderBrush="{DynamicResource MaterialDesignDivider}">
-            <Grid>
+            <Grid Margin="0,0,150,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="50"/>

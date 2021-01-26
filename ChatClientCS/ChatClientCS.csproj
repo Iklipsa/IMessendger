@@ -153,6 +153,8 @@
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\IChatService.cs" />
     <Compile Include="Services\IDialogService.cs" />
+    <Compile Include="TreeViewS\SourceClasses.cs" />
+    <Compile Include="TreeViewS\Wrapper.cs" />
     <Compile Include="Utils\BringNewItemIntoViewBehavior.cs" />
     <Compile Include="Utils\ByteBitmapSourceConverter.cs" />
     <Compile Include="Utils\ViewModelLocator.cs" />
@@ -215,7 +217,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassMessenger.cd" />
+    <None Include="ClassMessenger.cd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -264,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\iMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\home2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
